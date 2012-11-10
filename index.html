@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Good Data</title>
+	<!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" media="all" href=""/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+	
+	<!-- LESS framework stylesheet 
+	Should be compiled from style.less
+	I use http://wearekiss.com/simpless for auto-compiling on save
+	-->	
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" title="Primary Stylesheet" charset="utf-8">
+			
+	<!-- Bring in jQuery first, lots of other stuff depends on it -->
+	<script src="js/jquery-1.7.1.min.js" type="text/javascript" charset="utf-8"></script>	
+
+    <!-- Add Retina.js for retina support -->
+    <script src="js/retina.js" type="text/javascript" charset="utf-8"></script>
+
+	<!-- And underscore | http://documentcloud.github.com/underscore/	
+	<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>	-->
+
+	<!-- And D3 | https://github.com/mbostock/d3/wiki/API-Reference 	
+	<script src="js/d3.v2.min.js" type="text/javascript" charset="utf-8"></script> -->
+	
+	<!-- And Lettering.js | https://github.com/davatron5000/Lettering.js 		
+	<script src="js/jquery.lettering.js" type="text/javascript" charset="utf-8"></script> -->
+	
+	<!-- And Scrollorama | http://johnpolacek.github.com/scrollorama/ 			
+	<script src="js/jquery.scrollorama.js" type="text/javascript" charset="utf-8"></script> -->
+	
+	<!-- And Tabletop | https://github.com/jsoma/tabletop 				-->
+	<script src="js/tabletop.js" type="text/javascript" charset="utf-8"></script> 
+
+	<!-- And the Open Sans Google Webfont | https://www.google.com/webfonts#UsePlace:use/Collection:Open+Sans-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,800,300' rel='stylesheet' type='text/css'>	
+	
+	<!-- I can haz templates? | http://icanhazjs.com/ -->
+	<script src="js/ICanHaz.js" type="text/javascript" charset="utf-8"></script>		
+	
+	<script src="js/moredata.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script src="js/jquery.isotope.min.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+</head>
+<body>
+<div id="container">
+	<div id="title">
+		<h1>Good Data</h1>
+		<small><a href="https://docs.google.com/spreadsheet/pub?key=0ApAkxBfw1JT4dEphMEpZM051NlM3RUlfTlRwcUtENlE&output=html">Google Spreadsheet</a></small>
+	</div>
+	
+	<div id="controls">
+	   <span id="onlycurrentdata" data-filter=".recentyear-2012">Only current (2012) data</span>
+	   <span id="onlycurrentdata" data-filter="*">Show All</span>
+	   
+	</div>
+	
+	<div id="content" class="section">
+	    
+	</div>
+</div>
+
+
+<script id="rowtemplate" type="text/html">
+  <li class="dataset-row {{#mostrecentyearindata}}recentyear-{{mostrecentyearindata}} {{/mostrecentyearindata}}">
+    <h4><a href="{{datasetlink}}">{{ datasetname }}</a></h4></p>
+    <span class="metadata">
+        <span class="addedby">Added by: {{ personadding }} </span>
+        <span class="dateadded">on {{ dateadded }} </span>
+        
+        {{#documentation}}
+        <span class="documentation">
+            <a href="{{ #documentation }}">Documentation</a>
+        </span>
+        {{/documentation}}
+        
+        <span class="data-years">
+            <span class="recent-year">{{earliestyearindata}} -</span>
+            {{#mostrecentyearindata}}
+            <span class="earliest-year">{{mostrecentyearindata}}</span>            
+            {{/mostrecentyearindata}}            
+        </span>
+    </span>
+  </li>
+</script>
+
+<script type="text/javascript" charset="utf-8">	
+
+$(document).ready(function(){
+    
+$('#controls span').click(function(){
+  var selector = $(this).attr('data-filter');
+  $("#content").isotope({ filter: selector });
+  return false;
+});
+
+function init() {
+Tabletop.init({ key: '0ApAkxBfw1JT4dEphMEpZM051NlM3RUlfTlRwcUtENlE',
+               callback: function(data, tabletop) { 
+					makeDataRows(data);
+				},
+               simpleSheet: true 
+})
+}
+
+init();
+	
+});	
+</script>
+
+</body>
+</html>
