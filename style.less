@@ -8,7 +8,7 @@
   @media all and (-webkit-min-device-pixel-ratio : 1.5) {
     background-image: url(@at2x_path);
     //background-size: @w @h;
-  }  
+  }
 }
 
 /*---------------------------------------------------
@@ -67,7 +67,7 @@
   -webkit-border-radius: @radius;
   -moz-border-radius: @radius;
   border-radius: @radius;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
 .border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
   -webkit-border-top-right-radius: @topright;
@@ -82,7 +82,7 @@
   border-bottom-right-radius: @bottomright;
   border-bottom-left-radius: @bottomleft;
   border-top-left-radius: @topleft;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
 .opacity(@opacity: 0.5) {
   -moz-opacity: @opacity;
@@ -177,12 +177,12 @@ pre {
 label, input[type=button], input[type=submit], button { cursor: pointer; }
 
 
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
-p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
-img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em,
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figure, figcaption, hgroup, 
+article, aside, canvas, details, figure, figcaption, hgroup,
 menu, footer, header, nav, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -203,7 +203,7 @@ a img {border: 0;}
 @highlight: #b5bfcb;
 
 /* Link color, hover/visited will be generated from this */
-@linkcolor: #1F3D58;	
+@linkcolor: #1F3D58;
 
 /* Selection colours (easy to forget) */
 
@@ -232,7 +232,7 @@ body {-webkit-tap-highlight-color: @highlight;}
 }
 
 .large, h2 {
-	color: lighten(@fontcolor, 12%);	
+	color: lighten(@fontcolor, 12%);
 	font-size: 44px;
 	line-height: 48px;
 	font-weight: 800;
@@ -240,14 +240,14 @@ body {-webkit-tap-highlight-color: @highlight;}
 }
 
 .bigger, h3 {
-	color: lighten(@fontcolor, 10%);	
+	color: lighten(@fontcolor, 10%);
 	font-size: 28px;
 	line-height: 1.5em;
 	font-weight: 800;
 }
 
 .big, h4 {
-	color: lighten(@fontcolor, 7%);		
+	color: lighten(@fontcolor, 7%);
 	font-size: 24px;
 	line-height: 30px;
 	font-weight: 700;
@@ -273,7 +273,7 @@ strong {
   -webkit-border-radius: @radius;
 }
 
-/*	Column class / mixins 
+/*	Column class / mixins
 	---------------------	*/
 
 .1-column { width:  68px;   }
@@ -290,7 +290,7 @@ strong {
 
 
 
-/*		Default Layout: 992px. 
+/*		Default Layout: 992px.
 		Gutters: 24px.
 		Outer margins: 48px.
 		Leftover space for scrollbars @1024px: 32px.
@@ -306,9 +306,9 @@ body {
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 	margin-left: auto;
 	margin-right: auto;
-	
+
 	.at2x('img/space.jpg');
-	
+
 	/*
 	background-color: #222222;
     background-image: -webkit-gradient(radial, 50% 50%,0,50% 50%,200, from(rgb(47, 47, 48)), to(rgb(34, 34, 34)));
@@ -318,7 +318,7 @@ body {
     background-image: -ms-radial-gradient(50% 50%, rgb(34, 34, 34), rgb(47, 47, 48));
     background-image: radial-gradient(50% 50%, rgb(34, 34, 34), rgb(47, 47, 48));
     */
-	
+
 	/* Make sure our background behaves correctly */
     background-repeat: no-repeat;
 	-webkit-background-size: cover;
@@ -355,7 +355,7 @@ h2 {
     cursor: pointer;
     padding: 6px;
     border-radius: 3px;
-    
+
     background-color: rgba(0,10,0,0.6);
     margin-right: 12px;
 }
@@ -372,62 +372,75 @@ h2 {
     }
 }
 #content {
-    
+
     width: 896px;
     height: 1000px;
-    
+
     li {
         color: #313131;
         width: 252px;
         height: 148px;
-        
-        background-color: rgba(254,255,253,0.75);        
+
+        background-color: rgba(254,255,253,0.75);
         border: 1px solid white;
         border-radius: 3px;
         border-bottom-color: #999;
-                
+
         list-style-type: none;
 
         padding: 4px 12px;
         margin-bottom: 12px;
         margin-right: 12px;
-        
-        h4 {             
-            font-size: 24px; 
-            line-height: 1.125em; 
+
+        h4 {
+            font-size: 24px;
+            line-height: 1.125em;
             margin-bottom: 12px;
-            
-            text-shadow:rgba(240, 240, 240, 0.88) 0 1px 0; 
-            
+
+            text-shadow:rgba(240, 240, 240, 0.88) 0 1px 0;
+
             a:link {
                 text-decoration: none;
             }
-            
-            
+
+
         }
-        
+
         .metadata {
             display: block;
             line-height: 1.3em;
             font-size: 12px;
-            
+
+            #added {
+              opacity: 0.2;
+              cursor: default;
+
+              &:hover {
+                -webkit-transition:opacity .2s ease-out;
+                   -moz-transition:opacity .2s ease-out;
+                     -o-transition:opacity .2s ease-out;
+                        transition:opacity .2s ease-out;
+                opacity: 0.9;
+              }
+            }
+
             .data-years {
                 position: absolute;
                 bottom: 0; right: 0;
                 padding: 2px 4px;
                 background-color: rgba(15,15,15,0.2);
             }
-            
+
             .documentation {
                 position: absolute;
-                bottom: 2px; left: 0; 
-                padding: 0 6px;                
-                
+                bottom: 2px; left: 0;
+                padding: 0 6px;
+
             }
         }
     }
-    
-    
+
+
 }
 
 /*		Tablet Layout: 768px.
@@ -439,7 +452,7 @@ cols    1     2      3      4      5      6      7      8
 px      68    160    252    344    436    528    620    712    */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-	
+
 	body {
 		width: 712px;
 		padding: 32px 28px 60px;
@@ -457,12 +470,12 @@ cols    1     2      3
 px      68    160    252    */
 
 @media only screen and (max-width: 767px) {
-	
+
 	body {
 		width: 252px;
 		padding: 24px 34px 60px;
 	}
-	
+
 }
 
 
@@ -476,18 +489,18 @@ cols    1     2      3      4      5
 px      68    160    252    344    436    */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-	
+
 	body {
 		width: 436px;
 		padding: 24px 22px 48px;
 	}
-	
+
 }
 
 
-/* 
+/*
         Styling those forms / inputs
-        
+
 ------------------------------------------------------------ */
 label {
     color: black;
@@ -500,7 +513,7 @@ th {
 }
 button {
     opacity: 0.82;
-    border: 1px solid rgba(0,0,0,0.6);    
+    border: 1px solid rgba(0,0,0,0.6);
     padding: 0.5em;
     margin: 4px 8px;
     font-size: 15px;
@@ -510,11 +523,11 @@ button {
     -webkit-box-shadow: 1px 1px 1px #fff;
     -webkit-border-radius: 0.5em;
     outline: none;
-    
 
-    
+
+
     text-shadow: 0 2px 1px #FFF;
-    
+
     background-color: #ffffff;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(214, 214, 214)));
     background-image: -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
@@ -523,19 +536,19 @@ button {
     background-image: -ms-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
     background-image: linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#d6d6d6');
-    
+
     .transition(0.001s);
-    
+
     &:hover {
-        .transition(0.3s);        
+        .transition(0.3s);
         opacity: 1;
         border: 1px solid rgba(0,0,0,0.7);
-        text-shadow: 0 2px 2px #FFF;                
+        text-shadow: 0 2px 2px #FFF;
     }
     &:active {
         opacity: 0.9;
         border: 1px solid black;
-        
+
         background-color: #ffffff;
         background-image: -webkit-gradient(radial, 50% 50%,0,50% 50%,200, from(rgb(146, 146, 146)), to(rgb(255, 255, 255)));
         background-image: -webkit-radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
@@ -543,14 +556,14 @@ button {
         background-image: -o-radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
         background-image: -ms-radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
         background-image: radial-gradient(50% 50%, rgb(255, 255, 255), rgb(146, 146, 146));
-        
+
     }
 
 }
 .small-button {
     padding: 2px 4px;
     font-size: 10px;
-    text-shadow: 0 1px 1px #FFF;    
+    text-shadow: 0 1px 1px #FFF;
 }
 input, textarea, select {
     border: 2px solid rgba(0,0,0,0.2);
@@ -563,7 +576,7 @@ input, textarea, select {
     -webkit-box-shadow: 1px 1px 1px #fff;
     -webkit-border-radius: 0.5em;
     outline: none;
-    
+
     background-color: #ebebeb;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(235, 235, 235)), to(rgb(255, 255, 255)));
     background-image: -webkit-linear-gradient(top, rgb(235, 235, 235), rgb(255, 255, 255));
@@ -572,14 +585,14 @@ input, textarea, select {
     background-image: -ms-linear-gradient(top, rgb(235, 235, 235), rgb(255, 255, 255));
     background-image: linear-gradient(top, rgb(235, 235, 235), rgb(255, 255, 255));
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ebebeb', EndColorStr='#ffffff');
-    
+
     .transition(0.8s);
-    
+
     &:hover {
-        border: 2px solid rgba(0,0,0,0.4);        
+        border: 2px solid rgba(0,0,0,0.4);
     }
     &:active, &:focus {
-        border: 2px solid rgba(0,0,0,0.5);                
+        border: 2px solid rgba(0,0,0,0.5);
         background-color: #ffffff;
         background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 255, 255)), to(rgb(214, 214, 214)));
         background-image: -webkit-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
@@ -588,8 +601,8 @@ input, textarea, select {
         background-image: -ms-linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
         background-image: linear-gradient(top, rgb(255, 255, 255), rgb(214, 214, 214));
         filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ffffff', EndColorStr='#d6d6d6');
-        
-        text-shadow: 0 2px 1px #FFF;        
+
+        text-shadow: 0 2px 1px #FFF;
     }
 }
 input[type=checkbox],
@@ -630,11 +643,11 @@ input[type=radio] {
 
 .isotope,
 .isotope .isotope-item {
-  -webkit-transition-duration: 0.8s;
-     -moz-transition-duration: 0.8s;
-      -ms-transition-duration: 0.8s;
-       -o-transition-duration: 0.8s;
-          transition-duration: 0.8s;
+  -webkit-transition-duration: 1.4s;
+     -moz-transition-duration: 1.4s;
+      -ms-transition-duration: 1.4s;
+       -o-transition-duration: 1.4s;
+          transition-duration: 1.4s;
 }
 
 .isotope {

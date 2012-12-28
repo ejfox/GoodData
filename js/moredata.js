@@ -7,8 +7,11 @@ makeDataRows = function(data) {
     row = data[_i];
     $("#content").prepend($(ich.rowtemplate(row)));
   }
-  return $('#content').isotope({
+  $('#content').isotope({
     itemSelector: '.dataset-row',
     layoutMode: 'fitRows'
+  });
+  return $("#content").isotope({
+    filter: '.active-y'
   });
 };
